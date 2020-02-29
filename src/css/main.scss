@@ -1,0 +1,34 @@
+$primary-color: #ea728c;
+$primary-color-light: #fc9d9d;
+$dark: #4f3961;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 10px 0;
+}
+
+@import "./typography.scss";
+@import "./buttons.scss";
+@import "components/search.scss";
+@import "components/grid.scss";
+@import "components/image.scss";
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+svg {
+  transform: translateY(2px);
+}

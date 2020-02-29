@@ -1,0 +1,27 @@
+.btn {
+  padding: 10px;
+  border-radius: 1px;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &-icon {
+    background-color: white;
+
+    padding: 10px;
+    svg {
+      fill: $dark;
+    }
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  &-floating {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    padding: 12px;
+  }
+}

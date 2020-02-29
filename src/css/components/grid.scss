@@ -1,0 +1,43 @@
+.images-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+body *::-webkit-scrollbar {
+  display: none;
+}
+
+.images-p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.images-grid img {
+  width: 100%;
+}
+
+.images-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($primary-color, 0.2);
+  transition: opacity 0.1s;
+  z-index: 1000;
+  opacity: 1;
+
+  svg {
+    height: 100px;
+  }
+
+  &-hide {
+    z-index: -1000;
+    opacity: 0;
+  }
+}

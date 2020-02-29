@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; }
+
+html,
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 10px 0; }
+
+.btn {
+  padding: 10px;
+  border-radius: 1px;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s; }
+  .btn-icon {
+    background-color: white;
+    padding: 10px; }
+    .btn-icon svg {
+      fill: #4f3961; }
+    .btn-icon:hover {
+      background-color: #eee; }
+  .btn-floating {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    padding: 12px; }
+
+.search-form {
+  width: 90%;
+  margin: 0 auto;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .search-form input {
+    flex: auto;
+    background-color: #eee;
+    height: 100%;
+    border: none;
+    padding: 0 20px;
+    transition: 0.1s;
+    font-size: 15px; }
+    .search-form input:hover, .search-form input:active, .search-form input:focus {
+      background-color: #f7f7f7; }
+  .search-form button {
+    background: #ddd;
+    border: none;
+    padding: 0 40px;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.1s; }
+    .search-form button:hover {
+      background-color: #ccc; }
+
+.images-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; }
+
+body *::-webkit-scrollbar {
+  display: none; }
+
+.images-p {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.images-grid img {
+  width: 100%; }
+
+.images-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(234, 114, 140, 0.2);
+  transition: opacity 0.1s;
+  z-index: 1000;
+  opacity: 1; }
+  .images-loading svg {
+    height: 100px; }
+  .images-loading-hide {
+    z-index: -1000;
+    opacity: 0; }
+
+.image {
+  position: relative;
+  cursor: pointer;
+  height: fit-content; }
+  .image:hover .show-on-hover {
+    opacity: 1; }
+  .image .show-on-hover {
+    transition: 0.2s;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)); }
+  .image .icon-btns {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex; }
+    .image .icon-btns .btn-icon {
+      display: inline-block;
+      margin: 0 5px; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+svg {
+  transform: translateY(2px); }
