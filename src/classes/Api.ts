@@ -54,7 +54,8 @@ export class Api {
       ]
     });
     if (!file.canceled) {
-      const src = `https://pixabay.com/get/${image.id}?key=${this.key}`;
+      const src = `${image.largeImageURL}?key=${this.key}`;
+
       await this.download(src, file.filePath);
       console.log("Image downloaded successfully");
     }
@@ -77,7 +78,7 @@ export class Api {
   }
 
   async setWallpaper(image: ImageI): Promise<void> {
-    const src = `https://pixabay.com/get/${image.id}?key=${this.key}`;
+    const src = `${image.largeImageURL}?key=${this.key}`;
     const filePath = `wallpaper.jpg`;
     await this.download(src, filePath);
     wallpaper.set(filePath);
