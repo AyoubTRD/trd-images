@@ -5,12 +5,10 @@ import "./css/main.css";
 import { App } from "./components/App";
 import { Api } from "./classes/Api";
 
-import { Remote } from "electron";
-
 declare global {
   interface Window {
     api: Api;
-    remote: Remote;
+    remote: any;
     fs: typeof import("fs");
     https: typeof import("https");
     wallpaper: typeof import("wallpaper");
